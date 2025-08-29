@@ -15,7 +15,7 @@ import { useState } from "react";
 export default function Sidebar() {
   const pathname = usePathname();
   return (
-  <nav className="fixed left-0 top-0 h-screen w-64 bg-gray-700 shadow-lg flex flex-col z-40">
+  <nav className="fixed left-0 top-0 h-screen w-64 bg-gray-200 dark:bg-gray-700 shadow-lg flex flex-col z-40">
       <div className="flex items-center h-20 px-6 border-b border-gray-300">
         <Link href="/dashboard">
           <img className="w-[130px]" src="/assets/images/logo-white.svg" alt="Nexus ERP" />
@@ -26,10 +26,10 @@ export default function Sidebar() {
           <li key={item.href}>
             <Link href={item.href} legacyBehavior>
               <a
-                className={`flex items-center gap-3 px-4 py-2 rounded-lg font-semibold transition-colors duration-200 text-white
+                className={`flex items-center gap-3 px-4 py-2 rounded-lg font-semibold transition-colors duration-200
                   ${pathname === item.href
-                    ? "bg-red-500 shadow-xl"
-                    : "hover:bg-gray-600"}
+                    ? "bg-red-500 text-white shadow-xl"
+                    : "text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600"}
                 `}
                 style={{ boxShadow: pathname === item.href ? "0 4px 16px rgba(0,0,0,0.25)" : undefined }}
               >
