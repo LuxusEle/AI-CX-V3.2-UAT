@@ -1,5 +1,6 @@
 import "./globals.css";
 import Sidebar from "./Sidebar";
+import ThemeSwitcher from "./ThemeSwitcher";
 import { ReactNode } from "react";
 
 export const metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
       </head>
       <body className="min-h-screen bg-[#f8fafc] dark:bg-[#1a2232]">
+  <ThemeSwitcher />
         <Sidebar />
         <main className="ml-64 pt-10 px-8">
           <div className="flex justify-end mb-6">
