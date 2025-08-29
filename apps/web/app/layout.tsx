@@ -1,13 +1,11 @@
-
-
 import "./globals.css";
 import Sidebar from "./Sidebar";
+import { ReactNode } from "react";
+
 export const metadata = {
   title: "Nexus ERP",
   description: "Professional UI",
 };
-
-import { ReactNode } from "react";
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -35,5 +33,4 @@ export default function RootLayout({ children }: RootLayoutProps) {
       </body>
     </html>
   );
-}
 }
