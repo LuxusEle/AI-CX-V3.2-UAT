@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Admin · Users</h2>
+<table class="table">
+  <thead><tr><th>ID</th><th>Email</th><th>Role</th><th>Action</th></tr></thead>
+  <tbody>
+  {% for u in users %}
+    <tr>
+      <td>{{ u.id }}</td>
+      <td>{{ u.email }}</td>
+      <td>{{ u.role }}</td>
+      <td>
+        <form method="post" action="/admin/users/role" class="d-inline">
+          <input type="hidden" name="user_id" value="{{ u.id }}">
+          <select name="role" class="form-select d-inline w-auto">
+            <option value="user" {% if u.role=='user' %}selected{% endif %}>user</option>
+            <option value="admin" {% if u.role=='admin' %}selected{% endif %}>admin</option>
+          </select>
+          <button class="btn btn-sm btn-primary">Update</button>
+        </form>
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

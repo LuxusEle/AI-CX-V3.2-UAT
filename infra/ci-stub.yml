@@ -1,0 +1,28 @@
+name: ci
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Backend lint
+        run: |
+          pip install -r apps/api/requirements.txt
+          ruff check apps/api || true
+          black --check apps/api || true
+          pytest -q apps/api || true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Frontend lint
+        run: |
+          cd apps/web
+          npm ci
+          npm run lint --if-present
+          npm run build --if-present

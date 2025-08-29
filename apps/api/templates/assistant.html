@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Sam — Your Assistant</h2>
+  <div id="chat" class="mb-3"></div>
+  <form hx-post="/assistant" hx-target="#chat" hx-swap="beforeend" class="row g-2">
+    <div class="col-10"><input class="form-control" name="message" placeholder="E.g., update CRM stage to visit"></div>
+    <div class="col-2"><button class="btn btn-primary w-100" type="submit">Send</button></div>
+  </form>
+{% endblock %}

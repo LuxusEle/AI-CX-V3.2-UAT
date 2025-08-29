@@ -1,0 +1,11 @@
+name: Protect
+on:
+  pull_request:
+    branches: [ main, uat ]
+jobs:
+  protect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run protect check
+        run: python scripts/protect.py

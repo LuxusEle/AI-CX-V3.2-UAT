@@ -1,0 +1,14 @@
+{
+  "modules": [
+    "apps/api/src/services/bom_service.py",
+    "apps/api/src/services/po_service.py",
+    "apps/api/src/services/pdf.py",
+    "apps/api/src/rules/bom.py",
+    "apps/api/src/rules/po.py",
+    "apps/api/src/routers/quotes.py",
+    "apps/api/src/routers/workflows.py",
+    "apps/api/src/routers/agent.py",
+    "apps/api/templates/quotes.html",
+    "apps/api/templates/snippets/quote_item.html"
+  ]
+}

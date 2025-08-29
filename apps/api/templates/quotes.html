@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Quotes</h2>
+  <form id="qf" class="row g-2 mb-3" hx-post="/quotes" hx-target="#quotes-list" hx-swap="afterbegin">
+    <div class="col-5"><input class="form-control" name="description" placeholder="Item description" required></div>
+    <div class="col-2"><input class="form-control" name="unit_price" type="number" step="0.01" placeholder="Unit price" required></div>
+    <div class="col-2"><input class="form-control" name="qty" type="number" step="0.01" value="1" required></div>
+    <div class="col-3"><button class="btn btn-primary w-100" type="submit">Create Quote</button></div>
+  </form>
+
+  <ul id="quotes-list" class="list-group">
+    {% for q in quotes %}
+      {% include "snippets/quote_item.html" %}
+    {% endfor %}
+  </ul>
+{% endblock %}

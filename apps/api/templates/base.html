@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title or "Nexus ERP" }}</title>
+    <link rel="stylesheet" href="/static/assets/css/style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.12" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="p-3">
+        <h1 class="h4 m-0">Nexus ERP</h1>
+      </header>
+      <nav class="p-2">
+        <a href="/" class="me-3">Dashboard</a>
+        <a href="/clients" class="me-3">Clients</a>
+        <a href="/quotes">Quotes</a>
+      </nav>
+      <main class="p-3">
+        {% block content %}{% endblock %}
+      </main>
+    </div>
+    <script src="/static/assets/js/plugins/apexcharts.min.js"></script>
+    <script src="/static/assets/js/pcoded.min.js"></script>
+  </body>
+</html>
