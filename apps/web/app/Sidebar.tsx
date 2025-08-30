@@ -5,9 +5,16 @@ import { usePathname } from "next/navigation";
 
 const menuItems = [
   { name: "Dashboard", href: "/dashboard", icon: "home" },
-  { name: "Clients", href: "/clients", icon: "users" },
   { name: "Leads", href: "/leads", icon: "user-plus" },
+  { name: "Clients", href: "/clients", icon: "users" },
+  { name: "Projects", href: "/projects", icon: "folder" },
   { name: "Quotes", href: "/quotes", icon: "file-text" },
+  { name: "Vendors", href: "/vendors", icon: "truck" },
+  { name: "BOMs", href: "/boms", icon: "list" },
+  { name: "Purchase Orders", href: "/pos", icon: "shopping-cart" },
+  { name: "Admin", href: "/admin", icon: "settings" },
+  { name: "Agent Assistant", href: "/agent", icon: "message-square" },
+  { name: "UI Overview", href: "/ui", icon: "layout" },
 ];
 
 import { useState } from "react";
