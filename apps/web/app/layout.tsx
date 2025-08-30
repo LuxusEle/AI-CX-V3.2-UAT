@@ -1,8 +1,8 @@
 import { Outfit } from 'next/font/google';
-import '../UIPAGE/src/app/globals.css';
-import { SidebarProvider } from '../UIPAGE/src/context/SidebarContext';
-import { ThemeProvider } from '../UIPAGE/src/context/ThemeContext';
-import AppSidebar from '../UIPAGE/src/layout/AppSidebar';
+import './globals.css';
+import { SidebarProvider } from '../src/context/SidebarContext';
+import { ThemeProvider } from '../src/context/ThemeContext';
+import AppSidebar from '../src/layout/AppSidebar';
 
 const outfit = Outfit({ subsets: ["latin"] });
 
